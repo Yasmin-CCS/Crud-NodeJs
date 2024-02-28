@@ -1,0 +1,32 @@
+//Arquivo para organizar as rotas e permitir os testes
+POST http://localhost:8080/user
+# Infrmando que o formato dos dados é em JSON
+Content-type: application/json
+
+{
+  "name": "amanda",
+  "password" : "123"
+}
+
+# Separador das requisições
+###
+# Get com uma busca
+GET http://localhost:8080/users?search=Carlos
+
+###
+#Get todos
+GET http://localhost:8080/users
+
+###
+
+PUT http://localhost:8080/users/a48f7792-2d1a-4406-92a5-ec5a79255065
+# Infrmando que o formato dos dados é em JSON
+Content-type: application/json
+
+{
+  "name": "Carlota",
+  "password" : "123"
+}
+
+###
+DELETE http://localhost:8080/user/a48f7792-2d1a-4406-92a5-ec5a79255065
